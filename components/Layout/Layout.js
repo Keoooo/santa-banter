@@ -7,10 +7,11 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { useUser } from "../../utils/useUser";
 import LogOutBtn from "../UI/Buttons/LogoutBtn";
 import LogInBtn from "../UI/Buttons/LogInBtn";
+import { useAuth } from "../../utils/useAuth";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Post", href: "/post" },
+  { name: "Post", href: "/posts" },
 ];
 //gitinitdewfewfew
 function classNames(...classes) {
@@ -18,9 +19,11 @@ function classNames(...classes) {
 }
 
 export default function MainLayout({ children }) {
-  const { userLoaded, user, signOut, session, userDetails, subscription } =
-    useUser();
   const [isSelected, setIsSelected] = useState(navigation[0].name);
+
+  const { user: authUser } = useAuth();
+  console.log(authUser);
+
   const router = useRouter();
 
   const handleMenuItemClick = (name) => {
@@ -68,7 +71,7 @@ export default function MainLayout({ children }) {
                   <div className="hidden sm:ml-6 sm:flex sm:items-center">
                     <div className="sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                       {/* Profile dropdown */}
-                      {!user ? <LogInBtn /> : <LogOutBtn />}
+                      {!authUser ? <LogInBtn /> : <LogOutBtn />}
                     </div>
 
                     {/* Profile dropdown */}
@@ -88,7 +91,7 @@ export default function MainLayout({ children }) {
                   <div className="-mr-2 flex items-center sm:hidden">
                     {/* Mobile menu button */}
                     {/* Profile dropdown */}
-                    {!user ? <LogInBtn /> : <LogOutBtn />}
+                    {!authUser ? <LogInBtn /> : <LogOutBtn />}
                     <Disclosure.Button className="bg-white dark:bg-primaryDark inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500 dark:focus:ring-yellow-400">
                       <span className="sr-only">Open main menu</span>
                       {open ? (

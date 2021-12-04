@@ -9,8 +9,11 @@ export const UserContextProvider = (props) => {
   const [isLoading, setLoading] = useState(true);
   const [session, setSession] = useState(false);
   const [user, setUser] = useState(false);
+  const [signInLoading, setSignInLoading] = useState(false);
   const [userDetails, setUserDetails] = useState(null);
   const [subscription, setSubscription] = useState(null);
+  const [jokeData, setJokeData] = useState(null);
+  console.log(jokeData);
 
   useEffect(() => {
     const session = supabase.auth.session();
@@ -53,7 +56,12 @@ export const UserContextProvider = (props) => {
     isLoading,
     userLoaded,
     userDetails,
-    signIn: (options) => supabase.auth.signIn(options),
+    signInLoading,
+    signIn: () => {
+      setSignInLoading(true);
+      supabase.auth.signIn({ provider: "github" });
+      setSignInLoading(true);
+    },
     signUp: (options) => supabase.auth.signUp(options),
     signOut: () => {
       setUserDetails(null);

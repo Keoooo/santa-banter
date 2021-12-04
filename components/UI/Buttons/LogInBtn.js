@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { useUser } from "../../../utils/useUser";
+import { FaSpinner } from "react-icons/fa";
+import { useSignIn } from "react-supabase";
 
-const logoutBtn = () => {
-  const { signOut } = useUser();
+const logInBtn = () => {
+  const [{ error, fetching, session, user }, signIn] = useSignIn();
+
+  async function onClickSignIn() {
+    const { error, session, user } = await signIn({
+      provider: "github",
+    });
+  }
 
   return (
     <>
       <button
-        onClick={""}
-        className="inline-flex mr-3 items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-santaGreen hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+        onClick={() => onClickSignIn()}
+        className="inline-flex mr-3 items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-santaGreen hover:bg-santaGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-santaGreen"
       >
         Sign In
+        {fetching ? (
+          <div className="animate-spin ml-2">
+            <FaSpinner />{" "}
+          </div>
+        ) : null}
       </button>
     </>
   );
 };
 
-export default logoutBtn;
+export default logInBtn;
