@@ -28,6 +28,8 @@ export const UserContextProvider = (props) => {
     };
   }, []);
 
+  //init git
+
   const getUserDetails = () => supabase.from("users").select("*").single();
 
   useEffect(() => {
