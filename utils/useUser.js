@@ -22,7 +22,7 @@ export const UserContextProvider = (props) => {
         setUser(session?.user ?? null);
       }
     );
-
+    //uploads
     return () => {
       authListener.unsubscribe();
     };
