@@ -12,7 +12,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Post", href: "/post" },
 ];
-
+//gitinitdewfewfew
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
