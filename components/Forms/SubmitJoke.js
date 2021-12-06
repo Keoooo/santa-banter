@@ -50,7 +50,7 @@ const SubmitJoke = () => {
       id="joke-form"
       method="POST"
       onSubmit={formSubmitHandler}
-      className="flex flex-col justify-center items-center mt-10	"
+      className="flex flex-col justify-center items-center mt-10 mb-32	"
     >
       <div>
         <p className="mt-1 text-4xl font-christmasFont tracking-widest font-black  uppercase text-christmasGold sm:text-5xl sm:tracking-tight lg:text-6xl">

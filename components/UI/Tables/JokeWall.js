@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const JokeWall = ({ data }) => {
   return (
     <>
-      <div className="absolute w-full bg-santaGreen shadow-2xl border-christmasGold rounded-xl mb-10	 border-4 mt-6">
+      <div className=" w-full bg-santaGreen shadow-2xl border-christmasGold rounded-xl mb-32	 border-4 mt-6">
         <ul role="list" className="divide-y divide-christmasGold">
           {data ? (
             <>

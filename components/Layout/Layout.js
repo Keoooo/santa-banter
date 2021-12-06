@@ -7,6 +7,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import LogOutBtn from "../UI/Buttons/LogoutBtn";
 import LogInBtn from "../UI/Buttons/LogInBtn";
 import { useAuth } from "../../utils/useAuth";
+import Footer from "./Footer";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -134,6 +135,7 @@ export default function MainLayout({ children }) {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">{children}</div>
           </main>
         </div>
+        <Footer />
       </div>
     </>
   );
