@@ -88,11 +88,15 @@ export default function MainLayout({ children }) {
                     </Menu>
                   </div>
 
-                  <div className="-mr-2 flex items-center sm:hidden">
+                  <div className="-mr-2 flex items-center  sm:hidden">
                     {/* Mobile menu button */}
                     {/* Profile dropdown */}
+                    <h1 className="font-christmasFont mr-16 text-christmasGold tracking-widest text-3xl ">
+                      Santa Banter
+                    </h1>
                     {!authUser ? <LogInBtn /> : <LogOutBtn />}
-                    <Disclosure.Button className="bg-white dark:bg-primaryDark inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500 dark:focus:ring-yellow-400">
+
+                    <Disclosure.Button className="bg-christmasGold dark:bg-primaryDark inline-flex items-center justify-center p-2 rounded-md text-santaGreen hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-santaGreen dark:focus:ring-yellow-400">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
                         <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -114,8 +118,8 @@ export default function MainLayout({ children }) {
                       key={item.name}
                       className={classNames(
                         router.pathname === item.href
-                          ? "bg-indigo-50 dark:bg-secondaryDark dark:border-yellow-400 border-indigo-500 dark:text-white text-indigo-700 w-full"
-                          : "border-transparent w-full dark:text-yellow-400 text-gray-600 dark:hover:bg-secondaryDark hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800",
+                          ? "bg-christmasGold dark:bg-secondaryDark dark:border-yellow-400 border-santaGreen dark:text-white text-santaGreen w-full"
+                          : "border-transparent w-full dark:text-yellow-400 text-gray-50 dark:hover:bg-secondaryDark hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800",
                         "block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                       )}
                     >
