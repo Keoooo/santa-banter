@@ -1,39 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../../utils/supabaseClient";
 import { Provider, useRealtime } from "react-supabase";
 import { useSubscription } from "react-supabase";
+import Likes from "../LikeHandler/Likes";
 
-const JokeWall = () => {
-  const [newPost, SetNewPost] = useState(false);
-
-  const [{ data, error, fetching }, reexecute] = useRealtime("jokes");
-
-  useSubscription((payload) => {
-    console.log("Change received!", payload);
-    if (payload) {
-      SetNewPost(true);
-    } else {
-      null;
-    }
-  });
-
-  console.log(newPost);
-
+const JokeWall = ({ data }) => {
   return (
     <>
-      <div className="bg-santaGreen rounded-lg mt-10">
-        <ul role="list" className="divide-y divide-gray-200">
+      <div className="absolute w-full bg-santaGreen shadow-2xl border-christmasGold rounded-xl mb-10	 border-4 mt-6">
+        <ul role="list" className="divide-y divide-christmasGold">
           {data ? (
             <>
               {data.map((item, i) => (
                 <li key={i} className="py-4">
-                  <div className="flex ml-10 mr-10 space-x-3">
-                    <div className="flex-1 space-y-1">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-sm font-medium">{item.id}</h3>
-                        <p className="text-sm text-gray-500">{item.joke}</p>
+                  <div className="flex ml-10 mr-10 space-x-3 ">
+                    <div className="flex-1 space-y-1 ju ">
+                      <div className="flex items-center justify-between ">
+                        <div className="flex ">
+                          <h3 className="text-lg  tracking-widest  text-christmasGold font-medium">
+                            {`${item.user}`}
+                          </h3>
+
+                          <div className="flex"></div>
+                        </div>
+                        <Likes fav={item.likes} row={item.id} />
+
+                        <div className="flex">
+                          <p className="text-sm  text-christmasGold">
+                            {new Date(item.created_at)
+                              .toISOString()
+                              .replace("-", "/")
+                              .split("T")[0]
+                              .replace("-", "/")}
+                          </p>
+                        </div>
                       </div>
-                      <p className="text-sm text-gray-500">{item.joke}</p>
+                      <p className="text-lg text-christmasGold font-bold">
+                        {item.joke}
+                      </p>
                     </div>
                   </div>
                 </li>
