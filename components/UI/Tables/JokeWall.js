@@ -1,6 +1,5 @@
 import React from "react";
 import Likes from "../LikeHandler/Likes";
-import { motion, AnimatePresence } from "framer-motion";
 
 const JokeWall = ({ data }) => {
   return (

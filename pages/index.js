@@ -8,21 +8,27 @@ import { useSubscription } from "react-supabase";
 import { useFilter, useSelect } from "react-supabase";
 import { supabase } from "../utils/supabaseClient";
 import { motion, AnimatePresence } from "framer-motion";
+import { useFav } from "../utils/useCounter";
 
 export default function Home() {
   let mySubscription = null;
   const [leader, setLeader] = useState(false);
   const [jokes, setJokes] = useState([]);
+  const { favTouched, setFavTouched } = useFav();
 
   const filter = useFilter((query) =>
     query.from("jokes").select("*").order("likes", { ascending: false })
   );
 
-  const [{ data, error, fetching }, refetch] = useRealtime("jokes");
+  const [{ data, error, fetching }, reexecute] = useRealtime("jokes");
 
   useEffect(() => {
     getSortedData();
   }, [data]);
+
+  useEffect(async () => {
+    await reexecute();
+  }, [favTouched]);
 
   const getSortedData = async () => {
     const { data, error } = await supabase
