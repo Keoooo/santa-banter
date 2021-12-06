@@ -3,11 +3,16 @@ module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      christmasFont: ["Mountains of Christmas", "cursive"],
+    },
     extend: {
       colors: {
-        santaRed: "#F73525",
+        santaRed: "#D5392C",
         santaRedSecondary: "#D5392C",
-        santaGreen: "#378D0E",
+        santaGreen: "#2C8B53",
+        christmasGold: "#DAB761",
+        poop: "#341c02",
       },
     },
   },
