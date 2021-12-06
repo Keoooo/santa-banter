@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { useUser } from "../../utils/useUser";
 import LogOutBtn from "../UI/Buttons/LogoutBtn";
 import LogInBtn from "../UI/Buttons/LogInBtn";
 import { useAuth } from "../../utils/useAuth";
@@ -34,7 +33,7 @@ export default function MainLayout({ children }) {
       <div className="min-h-full">
         <Disclosure
           as="nav"
-          className="bg-gray-50 dark:bg-primaryDark border-b sticky dark:white border-gray-50"
+          className="bg-christmasGold dark:bg-primaryDark border-b sticky dark:white border-santaGreen"
         >
           {({ open }) => (
             <>
@@ -53,8 +52,8 @@ export default function MainLayout({ children }) {
                             onClick={() => handleMenuItemClick(item.href)}
                             className={classNames(
                               router.pathname === item.href
-                                ? "border-indigo-500 text-gray-900 dark:text-yellow-400 dark:border-yellow-400"
-                                : "border-transparent text-gray-500 dark:text-white hover:border-gray-300 hover:text-gray-700",
+                                ? "border-santaRed text-xl font-bold tracking-widest text-santaRed font-christmasFont "
+                                : "border-transparent text-xl font-bold tracking-widest text-santaGreen font-christmasFont hover:border-white hover:text-white",
                               "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                             )}
                             aria-current={
