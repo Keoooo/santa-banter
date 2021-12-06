@@ -8,6 +8,7 @@ import LogOutBtn from "../UI/Buttons/LogoutBtn";
 import LogInBtn from "../UI/Buttons/LogInBtn";
 import { useAuth } from "../../utils/useAuth";
 import Footer from "./Footer";
+//nav needs fixing  mobile
 
 const navigation = [
   { name: "Home", href: "/" },
