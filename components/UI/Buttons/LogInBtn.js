@@ -16,7 +16,7 @@ const logInBtn = () => {
     <>
       <button
         onClick={() => onClickSignIn()}
-        className="inline-flex mr-3 items-center font-christmasFont text-l tracking-widest font-bold px-2.5 py-1.5 border border-transparent text-xs hover:text-white rounded shadow-sm text-christmasGold bg-santaGreen hover:bg-santaGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-santaGreen"
+        className="inline-flex mr-3 items-center font-christmasFont text-l tracking-widest font-bold px-2.5 py-1.5 border border-transparent text-xs hover:text-white rounded shadow-sm text-christmasGold bg-santaRed hover:bg-santaGreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-santaGreen"
       >
         Sign In
         {fetching ? (

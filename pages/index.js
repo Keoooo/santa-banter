@@ -7,6 +7,7 @@ import { Provider, useRealtime } from "react-supabase";
 import { useSubscription } from "react-supabase";
 import { useFilter, useSelect } from "react-supabase";
 import { supabase } from "../utils/supabaseClient";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   let mySubscription = null;
@@ -42,7 +43,31 @@ export default function Home() {
       <Snow />
       <InfoSection />
       <Tabs toggle={toggle} tabState={leader} />
-      {!leader ? <JokeWall data={jokes} /> : <JokeWall data={data} />}
+      <AnimatePresence exitBeforeEnter>
+        {!leader ? (
+          <>
+            <motion.div
+              key="1"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <JokeWall data={jokes} />
+            </motion.div>
+          </>
+        ) : (
+          <motion.div
+            key="2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <JokeWall data={data} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

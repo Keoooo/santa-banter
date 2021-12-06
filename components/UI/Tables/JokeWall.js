@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Provider, useRealtime } from "react-supabase";
-import { useSubscription } from "react-supabase";
+import React from "react";
 import Likes from "../LikeHandler/Likes";
+import { motion, AnimatePresence } from "framer-motion";
 
 const JokeWall = ({ data }) => {
   return (

@@ -33,7 +33,7 @@ export default function MainLayout({ children }) {
       <div className="min-h-full">
         <Disclosure
           as="nav"
-          className="bg-christmasGold dark:bg-primaryDark border-b sticky dark:white border-santaGreen"
+          className="bg-santaGreen dark:bg-primaryDark border-b sticky dark:white border-santaGreen"
         >
           {({ open }) => (
             <>
@@ -52,8 +52,8 @@ export default function MainLayout({ children }) {
                             onClick={() => handleMenuItemClick(item.href)}
                             className={classNames(
                               router.pathname === item.href
-                                ? "border-santaRed text-xl font-bold tracking-widest text-santaRed font-christmasFont "
-                                : "border-transparent text-xl font-bold tracking-widest text-santaGreen font-christmasFont hover:border-white hover:text-white",
+                                ? "border-santaRed text-2xl font-bold tracking-widest text-white font-christmasFont "
+                                : "border-transparent text-2xl font-bold tracking-widest text-christmasGold font-christmasFont hover:border-white hover:text-white",
                               "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                             )}
                             aria-current={
