@@ -11,8 +11,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useFav } from "../utils/useCounter";
 
 export default function Home() {
-  let mySubscription = null;
-  const [leader, setLeader] = useState(false);
+  const [leader, setLeader] = useState(true);
   const [jokes, setJokes] = useState([]);
   const { favTouched, setFavTouched } = useFav();
 

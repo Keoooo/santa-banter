@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useUser } from "../../../utils/useUser";
 import { FaSpinner } from "react-icons/fa";
 import { useSignIn } from "react-supabase";
 
