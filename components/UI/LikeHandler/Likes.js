@@ -10,11 +10,11 @@ const Likes = ({ fav, row }) => {
   console.log(favTouched);
   const incrementCount = async (row_id) => {
     const { data, error } = await supabase.rpc("increment", { row_id: row_id });
-    setFavTouched(!fav);
+    setFavTouched(!favTouched);
   };
   const decrementCount = async (row_id) => {
     const { data, error } = await supabase.rpc("decrement", { row_id: row_id });
-    setFavTouched(!fav);
+    setFavTouched(!favTouched);
   };
 
   return (
