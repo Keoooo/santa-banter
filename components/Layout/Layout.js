@@ -54,15 +54,15 @@ export default function MainLayout({ children }) {
                             onClick={() => handleMenuItemClick(item.href)}
                             className={classNames(
                               router.pathname === item.href
-                                ? "border-santaRed text-3xl font-bold tracking-widest text-white font-christmasFont "
-                                : "border-transparent text-3xl font-bold tracking-widest text-christmasGold font-christmasFont hover:border-white hover:text-white",
+                                ? "border-santaRed font-bold tracking-widest text-white font-christmasFont "
+                                : "border-transparent font-bold tracking-widest text-christmasGold font-christmasFont hover:border-white hover:text-white",
                               "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                             )}
                             aria-current={
                               router.pathname === item.href ? "page" : undefined
                             }
                           >
-                            {item.name}
+                            <p className=" text-3xl"> {item.name}</p>
                           </a>
                         </Link>
                       ))}
