@@ -8,7 +8,7 @@
 
 ## Tech
 
--SupaBase
--NextJS
--TailwindCSS
--FramerMotion
+*SupaBase
+*NextJS
+*TailwindCSS
+*FramerMotion
