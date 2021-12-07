@@ -25,4 +25,5 @@ A Holiday Themed Jokes Wall. With Realtime Likes And Dislikes
 
 ## Pointers
 
-The Realtime docs are not beginner friendly as of this post and could do with some work
+The Realtime docs are not beginner friendly as of the time this post and could do with some work
+Auth is amazing and easy to set up!
