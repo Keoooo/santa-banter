@@ -66,7 +66,7 @@ const SubmitJoke = () => {
           <div className="">
             <label
               htmlFor="comment"
-              className="block uppercase ml-5 mt-10 text-christmasGold text-xl font-christmasFont"
+              className="block uppercase ml-5 mt-10 text-christmasGold text-2xl font-christmasFont"
             >
               Add your joke
             </label>
@@ -77,7 +77,7 @@ const SubmitJoke = () => {
                 onChange={jokeChangeHandler}
                 name="comment"
                 id="comment"
-                className="shadow-sm focus:ring-santaGreen text-santaGreen bg-christmasGold focus:border-santaGreen block  sm:text-sm border-santaGreenrounded-md"
+                className="shadow-sm rounded-xl focus:ring-santaGreen text-santaGreen bg-christmasGold focus:border-santaGreen block  sm:text-sm border-santaGreenrounded-md"
                 defaultValue={""}
               />
             </div>
