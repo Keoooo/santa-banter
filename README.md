@@ -16,11 +16,12 @@ A Holiday Themed Jokes Wall. With Realtime Likes And Dislikes
 - TailwindUI
 - FramerMotion
 
+<p float="left">
 <img src="https://user-images.githubusercontent.com/33136365/145005340-70835d36-f82c-42eb-bd42-9f73dd469df6.jpeg" width="100" height="100" />
 <img src="https://user-images.githubusercontent.com/33136365/145006012-99f87f4b-1240-4425-8793-e84757570c76.jpeg" width="100" height="100" />
 <img src="https://user-images.githubusercontent.com/33136365/145006139-ee21207d-f328-43cb-b17e-899413b0b26a.jpeg" width="100" height="100" />
 <img src="https://user-images.githubusercontent.com/33136365/145006218-f910f360-2dd3-4ce1-8dae-af1871107075.png" width="100" height="100" />
-
+</p>
 
 ## How Supabase Was Used?
 
