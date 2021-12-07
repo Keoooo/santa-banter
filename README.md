@@ -4,11 +4,11 @@
 
 ## Bio
 
-##### 4 month ago I decide to start learning javascrpit and then ReactJS Im currently in the process of building my first project away from tutorials, But I took some time away to join in the Supabase Holiday Hackathon.
+##### 4 month ago I decide to start learning javascript and then ReactJS Im currently in the process of building my first project away from tutorials, But I took some time away to join in the Supabase Holiday Hackathon.
 
 ## Tech
 
-SupaBase
-NextJS
-TailwindCSS
-FramerMotion
+-SupaBase
+-NextJS
+-TailwindCSS
+-FramerMotion
