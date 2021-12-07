@@ -27,4 +27,4 @@ A Holiday Themed Jokes Wall. With Realtime Likes And Dislikes
 
 The Realtime docs are not beginner friendly as of the time this post and could do with some work
 Auth is amazing and easy to set up!
-![supabase](https://user-images.githubusercontent.com/33136365/145005340-70835d36-f82c-42eb-bd42-9f73dd469df6.jpeg)
+![supabase](https://user-images.githubusercontent.com/33136365/145005340-70835d36-f82c-42eb-bd42-9f73dd469df6.jpeg =250x250))
