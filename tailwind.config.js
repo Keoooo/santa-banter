@@ -8,10 +8,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        santaRed: "#D5392C",
+        santaRed: "#AB2D26",
         santaRedSecondary: "#D5392C",
-        santaGreen: "#2C8B53",
-        christmasGold: "#DAB761",
+        santaGreen: "#093D24",
+        christmasGold: "#AC9D5C",
         poop: "#341c02",
       },
     },

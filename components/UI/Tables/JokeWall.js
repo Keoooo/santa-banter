@@ -14,7 +14,7 @@ const JokeWall = ({ data }) => {
                     <div className="flex-1 space-y-1 ju ">
                       <div className="flex items-center justify-between ">
                         <div className="flex ">
-                          <h3 className="text-lg  tracking-widest  text-christmasGold font-medium">
+                          <h3 className="text-lg  tracking-widest  text-santaRed font-medium">
                             {`${item.user}`}
                           </h3>
 
@@ -23,7 +23,7 @@ const JokeWall = ({ data }) => {
                         <Likes fav={item.likes} row={item.id} />
 
                         <div className="flex">
-                          <p className="text-sm  text-christmasGold">
+                          <p className="text-sm  text-santaRed">
                             {new Date(item.created_at)
                               .toISOString()
                               .replace("-", "/")
