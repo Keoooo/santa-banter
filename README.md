@@ -8,7 +8,7 @@
 
 ## Tech
 
-*SupaBase
+Markup : *SupaBase
 *NextJS
 *TailwindCSS
 *FramerMotion
