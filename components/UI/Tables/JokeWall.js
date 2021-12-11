@@ -9,7 +9,7 @@ const JokeWall = ({ data }) => {
           {data ? (
             <>
               {data.map((item, i) => (
-                <li key={i} className="py-4">
+                <li key={`${item.id}`} className="py-4">
                   <div className="flex ml-10 mr-10 space-x-3 ">
                     <div className="flex-1 space-y-1 ju ">
                       <div className="flex items-center justify-between ">

@@ -11,10 +11,14 @@ A Holiday Themed Jokes Wall. With Realtime Likes And Dislikes
 ## Team
 
 <<<<<<< HEAD
+
 ##### Just me :D
+
 =======
-#####  Just me :D
->>>>>>> 2089a4a39f99c26887a73234566244c9d6e5f29b
+
+##### Just me :D
+
+> > > > > > > 2089a4a39f99c26887a73234566244c9d6e5f29b
 
 ## Tech
 
@@ -42,8 +46,3 @@ A Holiday Themed Jokes Wall. With Realtime Likes And Dislikes
 
 The Realtime docs are not beginner friendly as of the time this post and could do with some work
 Auth is amazing and easy to set up!
-
-
-
-
-

@@ -27,6 +27,13 @@ export default function Home() {
 
   useEffect(async () => {
     await reexecute();
+
+    const mySubscription = supabase
+      .from("jokes")
+      .on("UPDATE", (payload) => {
+        console.log("Change received!", payload);
+      })
+      .subscribe();
   }, [favTouched]);
 
   const getSortedData = async () => {
@@ -34,7 +41,7 @@ export default function Home() {
       .from("jokes")
       .select()
       .order("likes", { ascending: false });
-    console.log(data);
+
     setJokes(data);
   };
 
@@ -42,7 +49,6 @@ export default function Home() {
     setLeader(!val);
   };
 
-  console.log(leader);
   return (
     <div className="relative">
       <Snow />

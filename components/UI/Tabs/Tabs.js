@@ -7,13 +7,13 @@ function classNames(...classes) {
 const Tabs = ({ toggle, tabState }) => {
   return (
     <div className="flex justify-center">
-      <div className="flex space-x-4 font-christmasFont text-christmasGold tracking-widest text-xl ">
+      <div className="flex space-x-4 font-christmasFont  text-christmasGold tracking-widest text-xl ">
         <button
           onClick={() => toggle(false)}
           className={classNames(
             !tabState
-              ? "hover:border-christmasGold border border-transparent p-3"
-              : "hover:border-christmasGold bg-santaGreen rounded-lg border border-transparent p-3"
+              ? "hover:border-christmasGold rounded-full  border border-transparent p-3"
+              : "hover:border-christmasGold shadow-2xl rounded-full shadow-santaGreen  bg-santaGreen  rounded-lg border border-transparent p-3"
           )}
         >
           Jokes
@@ -22,8 +22,8 @@ const Tabs = ({ toggle, tabState }) => {
           onClick={() => toggle(true)}
           className={classNames(
             tabState
-              ? "hover:border-christmasGold border border-transparent p-3"
-              : "hover:border-christmasGold bg-santaGreen rounded-lg border border-transparent p-3"
+              ? "hover:border-christmasGold border rounded-full border-transparent p-3"
+              : "hover:border-christmasGold shadow-2xl rounded-full shadow-christmasGold bg-santaGreen  border border-transparent p-3"
           )}
         >
           Leader Board
