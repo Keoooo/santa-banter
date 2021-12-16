@@ -10,15 +10,10 @@ A Holiday Themed Jokes Wall. With Realtime Likes And Dislikes
 
 ## Team
 
-<<<<<<< HEAD
 
 ##### Just me :D
 
-=======
 
-##### Just me :D
-
-> > > > > > > 2089a4a39f99c26887a73234566244c9d6e5f29b
 
 ## Tech
 
