@@ -23,7 +23,7 @@ const JokeWall = ({ data }) => {
                         <Likes fav={item.likes} row={item.id} />
 
                         <div className="flex-1  ">
-                          <p className="ml-96 text-sm   text-santaRed">
+                          <p className="ml-96 text-sm  font-bold text-santaRed">
                             {new Date(item.created_at)
                               .toISOString()
                               .replace("-", "/")
