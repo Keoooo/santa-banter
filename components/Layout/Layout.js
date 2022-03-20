@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { useState, useContext, Fragment, Children } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -32,7 +33,10 @@ export default function MainLayout({ children }) {
   };
   return (
     <>
-      <div className="min-h-full">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <div className="min-h-full min-full">
         <Disclosure
           as="nav"
           className="bg-santaGreen dark:bg-primaryDark border-b sticky dark:white border-santaGreen"

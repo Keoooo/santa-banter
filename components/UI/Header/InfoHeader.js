@@ -11,10 +11,10 @@ const InfoHeader = () => {
               <img src="/santa.png" className="h-36 w-36" />
             </div>
 
-            <p className="mt-1 text-4xl font-christmasFont tracking-widest font-black  uppercase text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+            <p className="mt-3 text-6xl font-christmasFont tracking-widest font-black  uppercase text-white sm:text-5xl sm:tracking-tight lg:text-8xl">
               Santa Banter
             </p>
-            <p className="max-w-l font-christmasFont font-black tracking-widest capitalize mt-5 mx-auto text-xl s text-white">
+            <p className="max-w-l font-christmasFont font-black tracking-widest capitalize mt-5 mx-auto text-3xl  text-white">
               A Place to Share your christmas themed jokes
             </p>
           </div>

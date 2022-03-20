@@ -50,7 +50,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <Snow />
       <InfoSection />
       <Tabs toggle={toggle} tabState={leader} />
