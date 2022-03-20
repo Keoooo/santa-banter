@@ -12,8 +12,8 @@ const Tabs = ({ toggle, tabState }) => {
           onClick={() => toggle(false)}
           className={classNames(
             !tabState
-              ? "hover:border-christmasGold p-3 rounded-full  border border-transparent "
-              : "hover:border-christmasGold shadow-2xl  shadow-santaGreen  bg-santaGreen  rounded-lg border border-transparent p-3"
+              ? "hover:border-christmasGold font-bold p-3 rounded-full  border border-transparent "
+              : "hover:border-christmasGold font-bold shadow-2xl  shadow-santaGreen  bg-santaGreen  rounded-lg border border-transparent p-3"
           )}
         >
           Jokes
@@ -22,8 +22,8 @@ const Tabs = ({ toggle, tabState }) => {
           onClick={() => toggle(true)}
           className={classNames(
             tabState
-              ? "hover:border-christmasGold border rounded-full border-transparent p-3"
-              : "hover:border-christmasGold shadow-2xl rounded-full shadow-christmasGold bg-santaGreen  border border-transparent p-3"
+              ? "hover:border-christmasGold font-bold border rounded-full border-transparent p-3"
+              : "hover:border-christmasGold font-bold shadow-2xl rounded-full shadow-christmasGold bg-santaGreen  border border-transparent p-3"
           )}
         >
           Leader Board
